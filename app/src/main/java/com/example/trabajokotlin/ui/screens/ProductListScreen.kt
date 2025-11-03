@@ -16,6 +16,7 @@ import androidx.compose.ui.unit.dp
 import com.example.trabajokotlin.viewmodel.MainViewModel
 import androidx.compose.material.TopAppBar
 import androidx.compose.material.icons.filled.ShoppingBag
+import androidx.compose.ui.graphics.Color
 
 
 @Composable
@@ -29,13 +30,13 @@ fun ProductListScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Productos") },
+                title = { Text("Productos",color = Color.White) },
                 actions = {
-                    IconButton(onClick = { /* buscador avanzado opcional */ }) {
-                        Icon(Icons.Filled.Search, contentDescription = "Buscar")
-                    }
-                    TextButton(onClick = onGoToCart) { Text("Carrito (${vm.cartCount()})") }
+
+                    TextButton(onClick = onGoToCart) { Text("Carrito (${vm.cartCount()})", color = Color.White) }
+
                 }
+
             )
         }
     ) { inner ->

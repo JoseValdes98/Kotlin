@@ -31,7 +31,7 @@ fun LoginScreen(onLogin: () -> Unit) {
             OutlinedTextField(value = pass, onValueChange = { pass = it }, label = { Text("Contraseña") })
             Spacer(Modifier.height(16.dp))
             Button(onClick = onLogin, modifier = Modifier.fillMaxWidth()) {
-                Text("Ingresar")
+                Text("Entrar")
             }
         }
     }

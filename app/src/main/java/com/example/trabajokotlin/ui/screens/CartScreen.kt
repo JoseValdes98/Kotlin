@@ -18,6 +18,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.example.trabajokotlin.viewmodel.MainViewModel
@@ -29,9 +30,9 @@ fun CartScreen(vm: MainViewModel, onBack: () -> Unit) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Carrito") },
+                title = { Text("Carro", color = Color.White) },
                 actions = {
-                    TextButton(onClick = { vm.sendSale() }) { Text("Enviar venta") }
+                    TextButton(onClick = { vm.sendSale() }) { Text("Enviar venta",color = Color.White) }
                 }
             )
         }
