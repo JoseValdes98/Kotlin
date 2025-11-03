@@ -8,6 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 // Import correcto
 import androidx.compose.material.TopAppBar
+import androidx.compose.ui.text.input.PasswordVisualTransformation
 
 
 @Composable
@@ -28,7 +29,7 @@ fun LoginScreen(onLogin: () -> Unit) {
         ) {
             OutlinedTextField(value = user, onValueChange = { user = it }, label = { Text("Usuario") })
             Spacer(Modifier.height(8.dp))
-            OutlinedTextField(value = pass, onValueChange = { pass = it }, label = { Text("Contraseña") })
+            OutlinedTextField(value = pass, onValueChange = { pass = it }, label = { Text("Contraseña") }, visualTransformation = PasswordVisualTransformation())
             Spacer(Modifier.height(16.dp))
             Button(onClick = onLogin, modifier = Modifier.fillMaxWidth()) {
                 Text("Entrar")
